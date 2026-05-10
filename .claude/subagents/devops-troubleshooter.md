@@ -1,5 +1,6 @@
 ---
 name: devops-troubleshooter
+model: sonnet
 description: Debug production issues, analyze logs, and fix deployment failures. Masters monitoring tools, incident response, and root cause analysis. Use PROACTIVELY for production debugging or system outages.
 category: infrastructure-operations
 ---

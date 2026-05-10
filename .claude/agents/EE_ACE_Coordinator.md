@@ -1,5 +1,7 @@
 ---
 name: ee-ace-coordinator
+model: sonnet
+description: Orchestrates EE⇄ACE self-improvement loop. Coordinates lesson reporting, playbook publishing, and experiment triggering between agents.
 ---
 
 # EE ⇄ ACE Coordinator
