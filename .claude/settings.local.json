@@ -1,0 +1,42 @@
+{
+  "env": {
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "7000",
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
+    "DISABLE_COST_WARNINGS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import cuml; print(''cuML (RAPIDS) available''); from cuml.ensemble import RandomForestClassifier; print(''GPU RandomForest available'')\")",
+      "Bash(python -c \"import xgboost as xgb; print(f''XGBoost version: {xgb.__version__}''); print(''XGBoost available'')\")",
+      "Bash(python scripts/diagnose_aug_oct_2024.py)",
+      "Bash(powershell -Command \"Get-Process | Sort-Object CPU -Descending | Select-Object -First 15 ProcessName, CPU, WorkingSet, Id | Format-Table -AutoSize\")",
+      "Bash(powershell -Command \"Get-Process | Where-Object {$_CPU -gt 10} | Sort-Object CPU -Descending | Format-Table ProcessName, @{Label=''CPU(s)'';Expression={[math]::Round($_CPU,2)}}, @{Label=''Memory(MB)'';Expression={[math]::Round($_WorkingSet/1MB,2)}}, Id -AutoSize\")",
+      "Bash(powershell -Command \"Get-Counter ''\\Processor(_Total)\\% Processor Time'' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue\")",
+      "Bash(wmic cpu get loadpercentage)",
+      "Bash(powershell -Command \"$processes = Get-Process | Where-Object {$_CPU -gt 0}; $totalCPU = ($processes | Measure-Object CPU -Sum).Sum; $processes | Select-Object ProcessName, @{Name=''CPU_Seconds'';Expression={[math]::Round($_CPU,1)}}, @{Name=''CPU_Percent'';Expression={[math]::Round(($_CPU/$totalCPU)*100,2)}}, @{Name=''Mem_MB'';Expression={[math]::Round($_WorkingSet/1MB,0)}}, Id | Sort-Object CPU_Seconds -Descending | Select-Object -First 10 | Format-Table -AutoSize\")",
+      "Bash(dir \"C:\\dev\\CryptoRain\\examples\\crypto-trading-bot\\models\" /B)",
+      "Bash(python scripts/test_regime_adaptive_ema.py:*)",
+      "Bash(python -c:*)",
+      "Bash(timeout 120 python:*)",
+      "Bash(python diagnose_aug_oct_2024.py:*)",
+      "Bash(python:*)",
+      "Bash(for task in 021 022 023 024 025 026 027)",
+      "Bash(do mv todos/TASK-$task-*.md completed/)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Skill(superpowers:executing-plans)",
+      "Bash(dir:*)",
+      "Read(//c/Users/SoV/.claude/agents/**)",
+      "Bash(powershell -Command:*)",
+      "Bash(findstr:*)",
+      "Bash(copy \"todos\\TASK-036-run-2year-backtest.md\" \"completed\\TASK-036-run-2year-backtest.md\")",
+      "Bash(del \"todos\\TASK-036-run-2year-backtest.md\")",
+      "Bash(timeout 240 python:*)",
+      "Bash(docker-compose:*)",
+      "Bash(git log:*)",
+      "mcp__ide__getDiagnostics"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
