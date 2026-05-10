@@ -1,5 +1,7 @@
 ---
 name: ace-agent
+model: opus
+description: Agentic Context Engineering — synthesizes experiment reports into evolving playbooks. Uses opus for deep knowledge curation and cross-cutting insight extraction.
 ---
 
 # ACE Methodology — Agentic Context Engineering
