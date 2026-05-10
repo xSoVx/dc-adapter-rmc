@@ -1,0 +1,144 @@
+project: dc-adapter-rmc
+date: "05/10/2026"
+connectathon: "2026-05-10"
+total_tasks: 47
+updated: "2026-05-10T00:00:00Z"
+
+phases:
+  - id: 1
+    name: Foundation & Config
+    github_issue: 2
+    status: todo
+    tasks: [TASK-001, TASK-002, TASK-003, TASK-004, TASK-005]
+    qa_gate: todo
+
+  - id: 2
+    name: Auth — PCM Client & Token Cache
+    github_issue: 3
+    status: todo
+    depends_on_phase: 1
+    tasks: [TASK-006, TASK-007, TASK-008]
+    qa_gate: todo
+
+  - id: 3
+    name: Introspection & Identity Resolution
+    github_issue: 4
+    status: todo
+    depends_on_phase: 2
+    tasks: [TASK-009, TASK-010, TASK-011]
+    qa_gate: todo
+
+  - id: 4
+    name: JWT Minting & FHIR Proxy Core
+    github_issue: 5
+    status: todo
+    depends_on_phase: 3
+    tasks: [TASK-012, TASK-013, TASK-014, TASK-015, TASK-016, TASK-017]
+    qa_gate: todo
+
+  - id: 5
+    name: Middleware & Audit Logger
+    github_issue: 6
+    status: todo
+    depends_on_phase: 4
+    tasks: [TASK-018, TASK-019, TASK-020, TASK-021]
+    qa_gate: todo
+
+  - id: 6
+    name: Observability & Structured Logging
+    github_issue: 7
+    status: todo
+    depends_on_phase: 4
+    tasks: [TASK-022, TASK-023, TASK-024, TASK-025]
+    qa_gate: todo
+
+  - id: 7
+    name: Error Handling & Graceful Shutdown
+    github_issue: 8
+    status: todo
+    depends_on_phase: [5, 6]
+    tasks: [TASK-026, TASK-027, TASK-028, TASK-029]
+    qa_gate: todo
+
+  - id: 8
+    name: Unit Tests — 7 Modules
+    github_issue: 9
+    status: todo
+    depends_on_phase: 7
+    tasks: [TASK-030, TASK-031, TASK-032, TASK-033, TASK-034, TASK-035, TASK-036, TASK-037]
+    qa_gate: todo
+
+  - id: 9
+    name: Integration Tests — HAPI FHIR
+    github_issue: 10
+    status: todo
+    depends_on_phase: 8
+    tasks: [TASK-038, TASK-039, TASK-040, TASK-041, TASK-042, TASK-043]
+    qa_gate: todo
+
+  - id: 10
+    name: Containerization & README
+    github_issue: 11
+    status: todo
+    depends_on_phase: 9
+    tasks: [TASK-044, TASK-045, TASK-046, TASK-047]
+    qa_gate: todo
+
+tasks:
+  # Phase 1
+  TASK-001: {status: todo, phase: 1, agent: python-expert, model: sonnet, file: todos/TASK-001-repo-structure.md}
+  TASK-002: {status: todo, phase: 1, agent: python-expert, model: sonnet, file: todos/TASK-002-requirements.md}
+  TASK-003: {status: todo, phase: 1, agent: python-expert, model: sonnet, file: todos/TASK-003-config-module.md}
+  TASK-004: {status: todo, phase: 1, agent: python-expert, model: sonnet, file: todos/TASK-004-config-yaml.md}
+  TASK-005: {status: todo, phase: 1, agent: python-expert, model: sonnet, file: todos/TASK-005-main-skeleton.md}
+  # Phase 2
+  TASK-006: {status: todo, phase: 2, agent: python-expert, model: sonnet, file: todos/TASK-006-mtls-client.md}
+  TASK-007: {status: todo, phase: 2, agent: python-expert, model: sonnet, file: todos/TASK-007-client-assertion.md}
+  TASK-008: {status: todo, phase: 2, agent: python-expert, model: sonnet, file: todos/TASK-008-token-service.md}
+  # Phase 3
+  TASK-009: {status: todo, phase: 3, agent: python-expert, model: sonnet, file: todos/TASK-009-introspection.md}
+  TASK-010: {status: todo, phase: 3, agent: ee-agent+python-expert, model: sonnet, file: todos/TASK-010-id-replacement.md}
+  TASK-011: {status: todo, phase: 3, agent: python-expert, model: sonnet, file: todos/TASK-011-mock-id-service.md}
+  # Phase 4
+  TASK-012: {status: todo, phase: 4, agent: python-expert, model: sonnet, file: todos/TASK-012-jwt-mint.md}
+  TASK-013: {status: todo, phase: 4, agent: python-expert, model: sonnet, file: todos/TASK-013-security-filter.md}
+  TASK-014: {status: todo, phase: 4, agent: python-expert, model: sonnet, file: todos/TASK-014-fhir-proxy.md}
+  TASK-015: {status: todo, phase: 4, agent: python-expert, model: sonnet, file: todos/TASK-015-fhir-verifier.md}
+  TASK-016: {status: todo, phase: 4, agent: python-expert, model: sonnet, file: todos/TASK-016-fhir-router.md}
+  TASK-017: {status: todo, phase: 4, agent: python-expert, model: sonnet, file: todos/TASK-017-health-router.md}
+  # Phase 5
+  TASK-018: {status: todo, phase: 5, agent: python-expert, model: sonnet, file: todos/TASK-018-correlation-middleware.md}
+  TASK-019: {status: todo, phase: 5, agent: python-expert, model: sonnet, file: todos/TASK-019-timing-middleware.md}
+  TASK-020: {status: todo, phase: 5, agent: python-expert, model: sonnet, file: todos/TASK-020-audit-middleware.md}
+  TASK-021: {status: todo, phase: 5, agent: python-expert, model: sonnet, file: todos/TASK-021-audit-service.md}
+  # Phase 6
+  TASK-022: {status: todo, phase: 6, agent: python-expert, model: sonnet, file: todos/TASK-022-otel-setup.md}
+  TASK-023: {status: todo, phase: 6, agent: python-expert, model: sonnet, file: todos/TASK-023-otel-spans.md}
+  TASK-024: {status: todo, phase: 6, agent: python-expert, model: sonnet, file: todos/TASK-024-otel-metrics.md}
+  TASK-025: {status: todo, phase: 6, agent: python-expert, model: sonnet, file: todos/TASK-025-structlog.md}
+  # Phase 7
+  TASK-026: {status: todo, phase: 7, agent: python-expert, model: sonnet, file: todos/TASK-026-error-catalog.md}
+  TASK-027: {status: todo, phase: 7, agent: python-expert, model: sonnet, file: todos/TASK-027-operation-outcome.md}
+  TASK-028: {status: todo, phase: 7, agent: python-expert+code-reviewer, model: sonnet, file: todos/TASK-028-exception-handlers.md}
+  TASK-029: {status: todo, phase: 7, agent: python-expert, model: sonnet, file: todos/TASK-029-graceful-shutdown.md}
+  # Phase 8
+  TASK-030: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-030-test-config.md}
+  TASK-031: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-031-test-token-service.md}
+  TASK-032: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-032-test-introspection.md}
+  TASK-033: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-033-test-id-replacement.md}
+  TASK-034: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-034-test-security-filter.md}
+  TASK-035: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-035-test-audit-service.md}
+  TASK-036: {status: todo, phase: 8, agent: python-expert, model: sonnet, file: todos/TASK-036-test-errors.md}
+  TASK-037: {status: todo, phase: 8, agent: test-automator, model: haiku, file: todos/TASK-037-conftest-fixtures.md}
+  # Phase 9
+  TASK-038: {status: todo, phase: 9, agent: test-automator, model: haiku, file: todos/TASK-038-hapi-seed-fixtures.md}
+  TASK-039: {status: todo, phase: 9, agent: ee-agent+python-expert, model: sonnet, file: todos/TASK-039-int-happy-path.md}
+  TASK-040: {status: todo, phase: 9, agent: ee-agent+python-expert, model: sonnet, file: todos/TASK-040-int-confidential-excluded.md}
+  TASK-041: {status: todo, phase: 9, agent: python-expert, model: sonnet, file: todos/TASK-041-int-inactive-token.md}
+  TASK-042: {status: todo, phase: 9, agent: python-expert, model: sonnet, file: todos/TASK-042-int-id-failure.md}
+  TASK-043: {status: todo, phase: 9, agent: python-expert, model: sonnet, file: todos/TASK-043-int-fhir-timeout.md}
+  # Phase 10
+  TASK-044: {status: todo, phase: 10, agent: deployment-engineer, model: haiku, file: todos/TASK-044-dockerfile.md}
+  TASK-045: {status: todo, phase: 10, agent: deployment-engineer, model: haiku, file: todos/TASK-045-docker-compose.md}
+  TASK-046: {status: todo, phase: 10, agent: python-expert, model: sonnet, file: todos/TASK-046-env-example.md}
+  TASK-047: {status: todo, phase: 10, agent: python-expert, model: sonnet, file: todos/TASK-047-readme.md}
